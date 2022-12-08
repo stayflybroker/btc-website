@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'broker/main.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Bootstrap Icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <title>Stay-Fly: Login</title>
+    <link rel="icon" href="{% static 'broker/logo1.png.jpg' %}">
+</head>
+
+
+<style>
+    body {
+        background: url("{% static 'broker/forex.jpg' %}")
+    }
+
+    .australian {
+        background: rgb(235, 235, 245);
+    }
+
+    .inputin {
+        width: 320px;
+        height: 45px;
+        border: 1px solid rgb(147, 147, 243);
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .inputin:hover {
+        background: rgb(245, 245, 245);
+    }
+
+    .submit-btn {
+        width: 40%;
+        height: 42px;
+    }
+
+    .move{
+        width:35%
+    }
+    .coning {
+        margin: 10px;
+        margin-left: 50px;
+        padding-left: 50px;
+        width: 70%;
+    }
+
+    .tradingview-widget-copyright{
+        display: none;
+    }
+
+    .tradingview-widget-container{
+        max-height: 100px;
+        width: 100%;
+        bottom: -30px;
+        position: fixed;
+    }
+
+
+    @media screen and (max-width: 880px) {
+        .coning {
+            width: 80%;
+        }
+
+        .move{
+        width:40%
+    }
+    }
+
+    @media screen and (max-width: 768px) {
+        .move{
+        width:90%
+    }
+
+        .submit-btn {
+            width: 100%;
+        }
+
+        .coning {
+            margin-left: 20px;
+            padding-left: 20px;
+            margin: 10px;
+            width: 95%;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!--navbar-->
+    <!--navbar-->
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg shadow-sm border p-3 mt-0 mx-0 my-0 australian">
+        <div class="container-xxl">
+            <a href="{% url 'broker-home' %}" class="navbar-brand">
+                <img src="{% static 'broker/logo1.png.jpg' %}" height="50px" width="70px">
+            </a>
+            <!-- navbar toggle  -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{% url 'broker-home' %}" class="nav-link text-primary fw-samibold">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'broker-about' %}" class="nav-link text-dark fw-samibold">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'broker-portfolio' %}" class="nav-link fw-samibold text-primary">Your Portfolio</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="{% url 'register' %}" class="ms-md-0 btn btn-primary px-4">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <!-- Get in touch  -->
+    <section id="contact">
+        <div class="container bg-light col-sm-6 coning">
+            <div class="text-start my-4"><br>
+                <h1 class="text-primary">Login</h1>
+                <p class="lead">Continue from where you left off.</p>
+                <small class="text-muted">Don't have an account? <a href="{% url 'register' %}">Register</a></small>
+            </div>
+            <div>
+                <div class="move">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            {{ form|crispy }}
+                        </fieldset><br>
+                    
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary submit-btn">Login</button>
+                        </div>
+                        </div>
+                    
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener"
+            target="_blank"><span class="blue-text">Markets</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async>
+            {
+                "symbols": [
+                    {
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR/USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "Bitcoin"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "Ethereum"
+                    },
+                    {
+                        "description": "",
+                        "proName": "BINANCE:BTCUSDT"
+                    },
+                    {
+                        "description": "",
+                        "proName": "BINANCE:CHZUSDTPERP"
+                    },
+                    {
+                        "description": "",
+                        "proName": "TVC:ZA10Y"
+                    },
+                    {
+                        "description": "",
+                        "proName": "MCX:GOLD1!"
+                    },
+                    {
+                        "description": "",
+                        "proName": "NSE:NIFTY"
+                    },
+                    {
+                        "description": "",
+                        "proName": "NSE:BANKNIFTY"
+                    },
+                    {
+                        "description": "",
+                        "proName": "NASDAQ:TSLA"
+                    },
+                    {
+                        "description": "",
+                        "proName": "NSE:HDFCBANK"
+                    },
+                    {
+                        "description": "",
+                        "proName": "NSE:AXISBANK"
+                    },
+                    {
+                        "description": "",
+                        "proName": "SGX:IN1!"
+                    },
+                    {
+                        "description": "",
+                        "proName": "CME_MINI:NQ1!"
+                    },
+                    {
+                        "description": "",
+                        "proName": "CME:6J1!"
+                    }
+                ],
+                    "showSymbolLogo": true,
+                        "colorTheme": "light",
+                            "isTransparent": false,
+                                "displayMode": "regular",
+                                    "locale": "en"
+            }
+        </script>
+</div>
+
+        <!-- Footer -->
+        <footer class="text-lg-start bg-dark text-muted">
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <img src="{% static 'broker/logo1.png.jpg' %}" class="mb-3" height="70px">
+                            <p class="text-light">
+                                Take advantage of the financial assets we’ve made
+                                available for you and start investing today.
+                            </p>
+                            <p class="text-light">
+                                We are committed to ensuring that our customers can mitigate
+                                the unpredictable reality of today’s economy.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+        
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4 text-warning">
+                                Products
+                            </h6>
+                            <p class="text-light">
+                                <a href="{% url 'broker-home' %}" class="text-reset">Home</a>
+                            </p>
+                            <p class="text-light">
+                                <a href="{% url 'broker-about' %}" class="text-reset">About us</a>
+                            </p>
+                            <p class="text-light">
+                                <a href="#" class="text-reset">Learn & Resources</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+        
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4 text-warning">
+                                Platform
+                            </h6>
+                            <p class="text-light">
+                                <a href="{% url 'login' %}" class="text-reset">Login</a>
+                            </p>
+                            <p class="text-light">
+                                <a href="{% url 'register' %}" class="text-reset">Register</a>
+                            </p>
+                            <p class="text-light">
+                                <a href="{% url 'broker-portfolio' %}" class="text-reset">Portfolio</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+        
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4 text-warning">Contact</h6>
+                            <h6 class="text-uppercase fw-bold mb-4 text-light">Location:</h6>
+                            <p class="text-light"> Pennsylvania Avenue, NW Washington</p>
+                            <p class="text-light"> PennsyAv. de la Paix 7 bis, 1202 Geneve, Switzerland.</p>
+                            <p class="text-light">+1 (210) 951-8335</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+        
+            <!-- Copyright -->
+            <div class="text-center p-4 bg-dark text-dark">
+                <span class="text-light">&copy; 2022</span>
+        
+            </div>
+        </footer>
+        <!-- Footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>

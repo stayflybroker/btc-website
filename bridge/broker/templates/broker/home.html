@@ -1,0 +1,547 @@
+{% extends "broker/base.html" %}
+{% block content %}
+{% load static %}
+    <!--Home header-->
+    <!--Home header-->
+    
+    <section id="intro" class="bg-primary">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 text-center text-md-start">
+                    <h1>
+                        <div>
+                            <h1> StayFly-Brokerage. </h1>
+                        </div>
+                        <div class="display-6 text-light my-3 fw-samibold">Welcome! We're glad you made it here!</div>
+                    </h1>
+    
+                    <p class="lead text-light my-4">
+                        Hello there! Inflation continues to increase at an unpredictable rate. Take advantage of the
+                        financial assets we’ve made
+                        available for you and start investing today.
+                    </p>
+    
+                    <a href="{% url 'register' %}">
+                        <btn class="btn py-2 px-5 fs-6 my-2 btnnnd"><span class="text-light">Register Now</span></btn>
+                    </a>
+                </div><br><br>
+                <div class="col-md-5 text-center d-md-block">
+                    <span class="tt" data-bs-placement="top">
+                        <img src="{% static 'broker/phone.png.jpg' %}" class="main-img img-fluid shadow-sm rounded" alt="phone">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Reviews-->
+    <section id="reviews" class="bg-light">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2 class="mb-1"><i class="bi bi-stars"></i>Some Reviews</h2>
+                <p class="lead">We picked a few reviews from previous beneficiaries.</p>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-8">
+                    <div class="list-group">
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">Easy to use.</h5>
+                            <p class="mb-1">Something lacking in a lot of brokers is just how much I was able to do
+                                without really knowing much about Finance. My
+                                account manager was super nice and there to hold my hand the whole time, explaining to
+                                me, the financial jargon I couldn't
+                                comprehend at first.</p>
+                            <small>Review by Lee Chong</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">Effects of surging price minimal.</h5>
+                            <p>I benefited from the Merdeka Generation Package which benefitted me. However, inflation
+                                did affect the purchasing power
+                                of money. Using this platform has helped me cancel out the effects of inflation greatly.
+                                I have been able to live more
+                                comfortably than I would have otherwise thought possible.</p>
+                            <small>Review by Wee Wang</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">Helped me in school.</h5>
+                            <p>As an undergraduate then, of Ngee Ann Polytechnic, I didn’t have much going on. I decided
+                                to try out trying this
+                                platform after being contacted. I had my skepticism since I’m not very savvy about
+                                financial investments, but my doubts
+                                were soon proven wrong after I kept getting returns after each trading section. This
+                                money enabled me to live
+                                comfortably in school until I graduated and found a Job. It is still of great importance
+                                now but was more back then in
+                                school.</p>
+                            <small>Review by Yong Tan</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">The Service was excellent</h5>
+                            <p>I honestly first bought my first financial asset of any sort on this platform. The
+                                service was excellent, and my account
+                                was keen to assist when I needed it. Highly recommended!</p>
+                            <small>Review Razak bin Osman</small>
+                        </div>
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">Helped me when I was financially struggling.</h5>
+                            <p>I had graduated from Wits University of Wits and had nothing going on, I couldn’t find a
+                                job and barely got interviews.
+                                My financial situation contributed to this, as I wasn’t mobile and couldn’t afford to
+                                move around. My mum recommended
+                                this program, and I decided to give it a try. I got steady returns which helped me
+                                greatly at the time. After a year
+                                with this platform, I was able to set up a small business. I’d highly recommend this
+                                platform to anyone struggling
+                                financially.</p>
+                            <small>Review by Blessing Nkosi.</small>
+                        </div>
+    
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">User-friendly and intuitive</h5>
+                            <p>I do not understand much financial jargon. However, I found this platform to be very
+                                intuitive and user-friendly. The
+                                Account managers were very friendly. I’ll highly recommend this platform.</p>
+                            <small>Review by Maria Dlamini.</small>
+                        </div>
+    
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">My number one Brokerage firm.</h5>
+                            <p>
+                                I do all my trading with this platform, I’ll highly recommend it.
+                            </p>
+                            <small>Review by Sunita Singh</small>
+                        </div>
+    
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">Helped me set up a Medium scale business in India.</h5>
+                            <p>
+                                I owned a medium-scale farm, however, Modi’s proposal of Farm Bills and Covid greatly
+                                affected me. Though both things
+                                are well now, throughout those times when I would otherwise have suffered, using this
+                                platform helped me. I am now able
+                                to start a medium-scale business and I’m much financially better off than I was years
+                                ago.
+                            </p>
+                            <small>Review by Sri Devi.</small>
+                        </div>
+    
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">Student Loan paid.</h5>
+                            <p>
+                                I admit I don’t exactly study a course that justifies the cost of College. I studied
+                                Anthropology and thought I’ll be
+                                able to make it to academia, but I couldn’t, and my options for a job were incredibly
+                                slim. I couldn’t get a decent job
+                                two years after graduating college, and it was difficult meeting up with bills. A friend
+                                would introduce me to this
+                                platform. The returns I received not only enabled me to pay the bills, but I was also
+                                able to quit my job (where the pay
+                                is meager) giving me the time to explore new career options, which I am currently doing,
+                                thanks to this platform.
+                            </p>
+                            <small>Review by Oliver George.</small>
+                        </div>
+    
+                        <div class="list-group-item py-3">
+                            <h5 class="mb-1">Easy for those who don't have much knowledge concerning financial literacy.
+                            </h5>
+                            <p>
+                                It’s stereotypical to think that alumni of the University of Nottingham must be very
+                                smart. Well, it doesn’t extend
+                                everywhere, as I wasn’t a very financially literate person. However, with this platform
+                                it was easy, and I didn’t have
+                                to be very savvy, yet I kept on seeing huge returns. I recommend this platform to
+                                anybody worrying about not being
+                                financially savvy enough to buy and handle financial assets. Account managers are nice,
+                                and walk you through the process
+                                comfortably.
+                            </p>
+                            <small>Review by Harry James.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <center>
+                <a href="{% url 'broker-reviews' %}">
+                    <btn class="btn btn-primary py-2 px-4 fs-6 my-2 ">See More Reviews</btn>
+                </a>
+            </center>
+        </div>
+    </section>
+
+        <!--pricing-->
+    
+        <section id="#plans" class="bg-primary py-5">
+            <h2 class="text-center text-light">PLANS</h2>
+            <div class="container my-5">
+                <div class="row justify-content-start">
+                    <div class="col-md-4 price-card">
+    
+                        <div class="card border-primary">
+                            <div class="card-header bg-warning text-light fw-bold">
+                                Basic Plan
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Features:</h5>
+                                <p class="text-subtitle">10% profit everyday.
+                                    <br>140% ROI after 2 Trading weeks.
+                                </p>
+                                <p class="display-6 text-primary fw-bold">$50-$500</p>
+                                <p class="lead">E.g. You'll get $1,200 (including the initial deposit) from investing $500
+                                    after 2 weeks of trading.</p>
+                                <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an Account</button></a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-md-4 price-card">
+    
+                        <div class="card border-primary">
+                            <div class="card-header bg-warning text-light fw-bold">
+                                +Advanced
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Features:</h5>
+                                <p class="text-subtitle">12% profit everyday.
+                                    <br>168% ROI after 2 Trading weeks.
+                                </p>
+                                <p class="display-6 text-primary fw-bold">$1,000-$2,000</p>
+                                <p class="lead">E.g. You'll get $2,680 (including the initial deposit) from investing $1,000
+                                    after 2 weeks of trading.</p>
+                                <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an Account</button></a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-md-4 price-card">
+    
+                        <div class="card border-primary">
+                            <div class="card-header bg-warning text-light fw-bold">
+                                +Premuim
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Features:</h5>
+                                <p class="text-subtitle">15% profit everyday.
+                                    <br>210% ROI after 2 Trading weeks.
+                                </p>
+                                <p class="display-6 text-primary fw-bold">$2,000-$5,000</p>
+                                <p class="lead">E.g. You'll get $6,200 (including the initial deposit) from investing $2,000
+                                    after 2 weeks of
+                                    trading.</p>
+                                <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an Account</button></a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-md-4 price-card">
+    
+                        <div class="card border-primary">
+                            <div class="card-header bg-warning text-light fw-bold">
+                                +Ultimate
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Features:</h5>
+                                <p class="text-subtitle">20% profit everyday.
+                                    <br>280% ROI after 2 Trading weeks.
+                                </p>
+                                <p class="display-6 text-primary fw-bold">$5,000-$10,000</p>
+                                <p class="lead">E.g. You'll get $19,000 (including the initial deposit) from investing
+                                    $5,000 after 2 weeks of
+                                    trading.</p>
+                                <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an Account</button></a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-md-4 price-card">
+    
+                        <div class="card border-primary">
+                            <div class="card-header bg-warning text-light fw-bold">
+                                +Spartan
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Features:</h5>
+                                <p class="text-subtitle">30% profit everyday.
+                                    <br>420% ROI after 2 Trading weeks.
+                                </p>
+                                <p class="display-6 text-primary fw-bold">>$10,000</p>
+                                <p class="lead">E.g. You'll get $52,000 (including the initial deposit) from investing
+                                    $10,000 after 2 weeks of
+                                    trading.</p>
+                                <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an Account</button></a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+        </section>
+    
+        <section class="bg-light">
+            <div class="container">
+                <h2 class="text-center text-primary">About Us</h2><br>
+                <p class="lead text-center mx-4">
+                    Data from the IFC (International Finance Cooperation) reveals that inflation more than ever keeps
+                    increasing. But at the
+                    same time, most people’s earnings do not increase proportionally. We are committed to ensuring that our
+                    customers can
+                    mitigate the unpredictable reality of today’s economy.
+                    certain.
+                </p>
+    
+                <p class="lead text-center mx-4">
+                    We can ensure profits by Trading with a whole variety of financial assets and leveraging different
+                    positions
+                    within the market, therefore eliminating the risk and consequence that would emerge
+                    from a single asset failing, or performing below expectations. Thus, for you, turning
+                    a profit is certain.
+                </p>
+                <center>
+                    <a href="{% url 'broker-about' %}">
+                        <btn class="btn btn-primary py-2 px-4 fs-6 my-2">Read more</btn>
+                    </a>
+                </center>
+    
+            </div>
+    
+    
+        </section>
+
+<!--Why choose us-->
+<section id="whyus" class="bg-primary">
+    <div class="container-lg my-2">
+        <h2 class="text-center text-light my-2">WHAT WE STAND FOR </h2>
+        <div class="row justify-content-start">
+
+            <div class="col-md-4 ">
+
+                <div class="card indian">
+                    <div class="card-header bg-primary text-light fw-bold">
+                        Trusted
+                    </div>
+                    <hr>
+                    <p class="text-dark">
+                        We are affiliated with the IFC and approved by the International Organization of Securities
+                        Commissions.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+
+                <div class="card indian">
+                    <div class="card-header bg-primary text-light fw-bold">
+                        Enabling Financial Stability.
+                    </div>
+                    <hr>
+                    <p class="text-dark">
+                        Our goal is to see to it that the effect of inflation, and unpredictable economic realities are
+                        heavily reduced or
+                        eliminated.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+
+                <div class="card indian">
+                    <div class="card-header bg-primary text-light fw-bold">
+                        Goal-Oriented
+                    </div>
+                    <hr>
+                    <p class="text-dark">
+                        We are among one the groups affiliated with the IFC (International Finance
+                        Cooperation), working on strategies aimed at
+                        reducing the effects of inflation.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 ">
+
+                <div class="card indian">
+                    <div class="card-header bg-primary text-light fw-bold">
+                        Global Outreach.
+                    </div>
+                    <hr>
+                    <p class="text-dark">We are available in over +50 countries spanning across six continents, and
+                        expanding each day.</p>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+
+                <div class="card indian">
+                    <div class="card-header bg-primary text-light fw-bold">
+                        Over +120 Assets:
+                    </div>
+                    <hr>
+                    <p class="text-dark">
+                        We trade with a wide range of Financial Assets. As a result, multiple position is always
+                        guaranteed
+                        to return a position return, and compensate for any unforeseen negative.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+        <!-- FAQ  (frequenly asked questions) -->
+    
+        <section class="white" id="topic">
+            <div class="container-md">
+                <div class="text-center">
+                    <h2>FAQ</h2>
+                    <p class="lead">Frequently asked questions.</p>
+                </div>
+    
+                <div class="row my-5 justify-content-around align-items-center">
+                    <div class="col-lg-6">
+                        <!-- accordion  -->
+                        <div class="accordion" id="chapters">
+                            <!-- single item  -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-1">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#chapter-1">
+                                        What is the aim of this program?
+                                    </button>
+                                </h2>
+                                <div id="chapter-1" class="accordion-collapse collapse " data-bs-parent="#chapters">
+                                    <div class="accordion-body">
+                                        <p>The IFC brings a variety of players to address critical world issues. Data over
+                                            the
+                                            last decade shows a growing inflation rate, with incomes not being correlated,
+                                            even though stocks and financial assets have been rising in value.
+                                        </p>
+                                        <p>Our goal is to make financial assets, which are typically immune to inflation,
+                                            accessible to the public, including those
+                                            who are not financially savvy.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single item end -->
+    
+                            <!-- single item  -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-2">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#chapter-2">
+                                        How long does a trading section last?
+                                    </button>
+                                </h2>
+                                <div id="chapter-2" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                    <div class="accordion-body">
+                                        <p>A trading section lasts two weeks. After two weeks you should then see your
+                                            profits increase in proportion to the plan you’ve selected. After which you can
+                                            then make a withdrawal.
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single item end -->
+                            <!-- single item  -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-3">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#chapter-3">
+                                        How many countries do we operate in?
+                                    </button>
+                                </h2>
+                                <div id="chapter-3" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                    <div class="accordion-body">
+                                        <p>Currently, we operate in over +50 countries on all continents
+                                            except Antarctica. We keep expanding each day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single item end -->
+                            <!-- single item  -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-4">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#chapter-4">
+                                        How many returns will I get?.
+                                    </button>
+                                </h2>
+                                <div id="chapter-4" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                    <div class="accordion-body">
+                                        <p>How much profit you get is dependent on the plan you select.
+                                            Please scroll up (right after the about section) or visit our about us page to
+                                            view our catalog.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single item end -->
+    
+                            <!-- single item  -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-5">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#chapter-5">
+                                        What are we affiliated with any international organization?
+                                    </button>
+                                </h2>
+                                <div id="chapter-5" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                    <div class="accordion-body">
+                                        <p>We are affiliated with the IFC (International Finance Cooperation), which is a
+                                            sub-organization of the World Bank. The
+                                            IFC’s goal is to reduce economic downturns and their effects. It does so by
+                                            bringing a variety of layers together to
+                                            contribute.</p>
+                                        <p>We’re laying our part by making access to financial assets accessible and
+                                            profitable as well. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single item end -->
+    
+                            <!-- single item  -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-5">
+                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                        data-bs-target="#chapter-6">
+                                        What do I need to get started?
+                                    </button>
+                                </h2>
+                                <div id="chapter-6" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                                    <div class="accordion-body">
+                                        <p>You would need to create an account with us, please click on register on the
+                                            navigation bar above to get started. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single item end -->
+    
+    
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-6 col-lg-4 mb-4 mb-lg-0">
+                        <img class="img-fluid" src="{% static 'broker/img4-1.jpg' %}" alt="Image">
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    
+        
+
+{% endblock %}

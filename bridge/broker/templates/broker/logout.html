@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'broker/main.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Bootstrap Icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <title>Stay-Fly: Start your journey towards financial security.</title>
+    <link rel="icon" href="{% static 'broker/logo1.png.jpg' %}">
+</head>
+
+
+<style>
+
+    .australian {
+        background: rgb(235, 235, 245);
+    }
+
+    .inputin {
+        width: 320px;
+        height: 45px;
+        border: 1px solid rgb(147, 147, 243);
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .inputin:hover {
+        background: rgb(245, 245, 245);
+    }
+
+    .submit-btn {
+        width: 40%;
+        height: 42px;
+    }
+
+    .move {
+        width: 35%
+    }
+
+    .coning {
+        margin: 10px;
+        margin-left: 50px;
+        padding-left: 50px;
+        width: 70%;
+    }
+
+    @media screen and (max-width: 880px) {
+        .coning {
+            width: 80%;
+        }
+
+        .move {
+            width: 40%
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .move {
+            width: 90%
+        }
+
+        .submit-btn {
+            width: 100%;
+        }
+
+        .coning {
+            margin-left: 20px;
+            padding-left: 20px;
+            margin: 10px;
+            width: 95%;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!--navbar-->
+    <!--navbar-->
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg shadow-sm border p-3 mt-0 mx-0 my-0 australian">
+        <div class="container-xxl">
+            <a href="{% url 'broker-home' %}" class="navbar-brand">
+                <img src="{% static 'broker/logo1.png.jpg' %}" height="50px" width="70px">
+            </a>
+            <!-- navbar toggle  -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{% url 'broker-home' %}" class="nav-link text-primary fw-samibold">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'broker-about' %}" class="nav-link text-dark fw-samibold">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'broker-portfolio' %}" class="nav-link fw-samibold text-primary">Your
+                            Portfolio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'register' %}" class="ms-md-0 btn btn-primary px-4">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    {% load crispy_forms_tags %}
+    {% block content %}
+
+    <!-- Get in touch  -->
+    <section class="bg-light">
+        <div class="container">
+            <h1 class="text-dark">You are Logged Out</h1>
+                <small><a href="{% url 'login' %}">Log in Again!</a></small>        
+        </div>
+    </section>
+    {% endblock content %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>

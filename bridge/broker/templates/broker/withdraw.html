@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Bootstrap Icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="icon" href="{% static 'broker/logo1.png.jpg' %}">
+    <title>Withdraw</title>
+</head>
+<style>
+    body {
+        background: rgb(20, 18, 18);
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    li {
+        margin-right: 40px
+    }
+
+    .indian {
+        min-width: 250px;
+        padding: 20px;
+        box-shadow: 2px 2px 2px #07447e;
+        color: #404040;
+        text-align: center;
+    }
+
+    hr {
+        background: blue;
+    }
+
+    .inputi {
+        width: 320px;
+        height: 45px;
+        border: 1px solid transparent;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .butining {
+        width: 320px;
+        height: 45px;
+        border: 1px solid rgb(147, 147, 243);
+        margin-bottom: 20px;
+    }
+
+    .inputi:hover {
+        background: rgb(245, 245, 245);
+    }
+
+    .australian {
+        background: rgb(235, 235, 245);
+    }
+
+    h1 {
+        color: rgb(247, 247, 11);
+        line-break: auto;
+    }
+
+    .btnnnd:hover {
+        opacity: 0.9;
+    }
+
+    a:hover {
+        opacity: 0.9;
+    }
+
+    .below {
+        bottom: 0;
+    }
+
+    .tradingview-widget-copyright{
+        display: none;
+    }
+
+    .tradingview-widget-container{
+        max-height: 100px;
+        width: 100%;
+        bottom: -30px;
+        position: fixed;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        li {
+            margin-bottom: 20px
+        }
+
+        .indian {
+            margin: 20px
+        }
+
+        .inputi {
+            width: 300px;
+            height: 50px;
+        }
+
+        .butining {
+            width: 300px;
+            height: 50px;
+        }
+
+        .submit-btn {
+            width: 300px;
+            height: 45px;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg shadow-sm border p-3 mt-0 mx-0 my-0 australian">
+        <div class="container-xxl">
+            <a href="{% url 'broker-home' %}" class="navbar-brand">
+                <img src="{% static 'broker/logo1.png.jpg' %}" height="50px" width="70px">
+            </a>
+            <!-- navbar toggle  -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{% url 'broker-deposit' %}" class="nav-link text-primary fw-samibold">Deposit</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="{% url 'broker-portfolio' %}" class="nav-link text-dark fw-samibold">Your Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'broker-about' %}" class="nav-link fw-samibold text-primary">
+                            About us
+                        </a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="{% url 'broker-withdraw' %}" class="nav-link text-dark fw-samibold">Withdraw</a>
+                    </li>
+                
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <center>
+                <h1>Withdraw</h1>
+                <h4 class="text-light">Available Balance: {{ user.balance.amount }}</h4>
+                <small class="text-light"> Please note that withdrawals are only possible after a <br> trading section (2 weeks after an initial deposit is made) is
+                    complete. </small><br><br>
+
+
+                <h6 class="text-light">Pay into your BTC wallet and send <br>
+                    to your Bank account in your local currency.
+                </h6>
+
+
+                <form method="POST">
+                    <input type="text" class="rounded inputi" placeholder="Amount (in $ Dollar)"><br>
+                    <input type="text" class="rounded inputi" placeholder="Paste your BTC address here"><br>
+                    <div class="mb-3">
+                        <a href="{% url 'broker-done' %}">
+                            <btn class="btn btn-warning butining">
+                            <span class="text-light">Pay</span>
+                        </btn>
+                    </a>
+            
+                    </div>
+                </form>
+                <small><span class="text-light"> Confused, or have any issues?<br> Please contact your account manager.
+
+
+            </center>
+        </div>
+
+    </section>
+
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener"
+                target="_blank"><span class="blue-text">Markets</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            async>
+                {
+                    "symbols": [
+                        {
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500"
+                        },
+                        {
+                            "proName": "FOREXCOM:NSXUSD",
+                            "title": "US 100"
+                        },
+                        {
+                            "proName": "FX_IDC:EURUSD",
+                            "title": "EUR/USD"
+                        },
+                        {
+                            "proName": "BITSTAMP:BTCUSD",
+                            "title": "Bitcoin"
+                        },
+                        {
+                            "proName": "BITSTAMP:ETHUSD",
+                            "title": "Ethereum"
+                        },
+                        {
+                            "description": "",
+                            "proName": "BINANCE:BTCUSDT"
+                        },
+                        {
+                            "description": "",
+                            "proName": "BINANCE:CHZUSDTPERP"
+                        },
+                        {
+                            "description": "",
+                            "proName": "TVC:ZA10Y"
+                        },
+                        {
+                            "description": "",
+                            "proName": "MCX:GOLD1!"
+                        },
+                        {
+                            "description": "",
+                            "proName": "NSE:NIFTY"
+                        },
+                        {
+                            "description": "",
+                            "proName": "NSE:BANKNIFTY"
+                        },
+                        {
+                            "description": "",
+                            "proName": "NASDAQ:TSLA"
+                        },
+                        {
+                            "description": "",
+                            "proName": "NSE:HDFCBANK"
+                        },
+                        {
+                            "description": "",
+                            "proName": "NSE:AXISBANK"
+                        },
+                        {
+                            "description": "",
+                            "proName": "SGX:IN1!"
+                        },
+                        {
+                            "description": "",
+                            "proName": "CME_MINI:NQ1!"
+                        },
+                        {
+                            "description": "",
+                            "proName": "CME:6J1!"
+                        }
+                    ],
+                        "showSymbolLogo": true,
+                            "colorTheme": "light",
+                                "isTransparent": false,
+                                    "displayMode": "regular",
+                                        "locale": "en"
+                }
+            </script>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

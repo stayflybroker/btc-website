@@ -1,0 +1,54 @@
+section {
+  padding: 60px 0;
+}
+
+.white {
+  background: white;
+}
+
+li {
+  margin-right: 40px;
+}
+
+.indian {
+  min-width: 250px;
+  padding: 20px;
+  box-shadow: 2px 2px 2px #07447e;
+  color: #404040;
+  text-align: center;
+}
+
+hr {
+  background: blue;
+}
+
+.price-card {
+  margin-top: 20px;
+}
+
+.australian {
+  background: rgb(235, 235, 245);
+}
+
+h1 {
+  color: rgb(247, 247, 11);
+  line-break: auto;
+}
+
+.btnnnd:hover {
+  opacity: 0.9;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  li {
+    margin-bottom: 20px;
+  }
+
+  .indian {
+    margin: 20px;
+  }
+}

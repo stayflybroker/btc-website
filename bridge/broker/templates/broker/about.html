@@ -1,0 +1,301 @@
+{% extends "broker/base.html" %}
+{% block content %}
+{% load static %}
+<!-- About US-->
+
+<section class="bg-light">
+    <div class="container">
+        <h2 class="text-center text-primary">About Us</h2><br>
+        <p class="lead text-center mx-4">
+            Data from the IFC (International Finance Cooperation) reveals that inflation more than ever keeps
+            increasing. But at the
+            same time, most people’s earnings do not increase proportionally. We are committed to ensuring that our
+            customers can
+            mitigate the unpredictable reality of today’s economy.
+            certain.
+        </p>
+
+        <p class="lead text-center mx-4">
+            We can ensure profits by Trading with a whole variety of financial assets and leveraging different
+            positions
+            within the market, therefore eliminating the risk and consequence that would emerge
+            from a single asset failing, or performing below expectations. Thus, for you, turning
+            a profit is certain.
+        </p>
+
+        <p class="lead text-center mx-4">
+        We are among the numerous organizations affiliated with the IFC [which is a sub-organization of the World Bank]. IFC is
+        shifting to a more strategic approach, systematically linking our advisory programs to the greatest needs identified in
+        World Bank Group country and sector strategies. We will increasingly focus on developing high-impact projects that can
+        help our individuals in need of the financing they need—particularly but not limited to those prone to the effects of
+        inflation.
+        </p>
+        
+
+    </div>
+
+
+</section>
+
+
+<!--pricing-->
+
+<section id="#plans" class="bg-primary py-5">
+    <h2 class="text-center text-light">PLANS</h2>
+    <div class="container my-5">
+        <div class="row justify-content-start">
+            <div class="col-md-4 price-card">
+
+                <div class="card border-primary">
+                    <div class="card-header bg-warning text-light fw-bold">
+                        Basic Plan
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Features:</h5>
+                        <p class="text-subtitle">10% profit everyday.
+                            <br>140% ROI after 2 Trading weeks.
+                        </p>
+                        <p class="display-6 text-primary fw-bold">$50-$500</p>
+                        <p class="lead">E.g. You'll get $1,200 (including the initial deposit) from investing $500
+                            after 2 weeks of trading.</p>
+                        <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an
+                                Account</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 price-card">
+
+                <div class="card border-primary">
+                    <div class="card-header bg-warning text-light fw-bold">
+                        +Advanced
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Features:</h5>
+                        <p class="text-subtitle">12% profit everyday.
+                            <br>168% ROI after 2 Trading weeks.
+                        </p>
+                        <p class="display-6 text-primary fw-bold">$1,000-$2,000</p>
+                        <p class="lead">E.g. You'll get $2,680 (including the initial deposit) from investing $1,000
+                            after 2 weeks of trading.</p>
+                        <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an
+                                Account</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 price-card">
+
+                <div class="card border-primary">
+                    <div class="card-header bg-warning text-light fw-bold">
+                        +Premuim
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Features:</h5>
+                        <p class="text-subtitle">15% profit everyday.
+                            <br>210% ROI after 2 Trading weeks.
+                        </p>
+                        <p class="display-6 text-primary fw-bold">$2,000-$5,000</p>
+                        <p class="lead">E.g. You'll get $6,200 (including the initial deposit) from investing $2,000
+                            after 2 weeks of
+                            trading.</p>
+                        <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an
+                                Account</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 price-card">
+
+                <div class="card border-primary">
+                    <div class="card-header bg-warning text-light fw-bold">
+                        Ultimate
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Features:</h5>
+                        <p class="text-subtitle">20% profit everyday.
+                            <br>280% ROI after 2 Trading weeks.
+                        </p>
+                        <p class="display-6 text-primary fw-bold">$5,000-$10,000</p>
+                        <p class="lead">E.g. You'll get $19,000 (including the initial deposit) from investing
+                            $5,000 after 2 weeks of
+                            trading.</p>
+                        <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an
+                                Account</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 price-card">
+
+                <div class="card border-primary">
+                    <div class="card-header bg-warning text-light fw-bold">
+                        Spartan
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Features:</h5>
+                        <p class="text-subtitle">30% profit everyday.
+                            <br>420% ROI after 2 Trading weeks.
+                        </p>
+                        <p class="display-6 text-primary fw-bold">>$10,000</p>
+                        <p class="lead">E.g. You'll get $52,000 (including the initial deposit) from investing
+                            $10,000 after 2 weeks of
+                            trading.</p>
+                        <a href="{% url 'register' %}"><button class="btn btn-primary mt-3">Create an
+                                Account</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FAQ  (frequenly asked questions) -->
+
+<section class="white" id="topic">
+    <div class="container-md">
+        <div class="text-center">
+            <h2>FAQ</h2>
+            <p class="lead">Frequently asked questions.</p>
+        </div>
+
+        <div class="row my-5 justify-content-around align-items-center">
+            <div class="col-6 col-lg-4 mb-4 mb-lg-0">
+                <img class="img-fluid" src="{% static 'broker/img4-1.jpg' %}" alt="Image">
+            </div>
+
+            <div class="col-lg-6">
+                <!-- accordion  -->
+                <div class="accordion" id="chapters">
+                    <!-- single item  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-1">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-1">
+                                What is the aim of this program?
+                            </button>
+                        </h2>
+                        <div id="chapter-1" class="accordion-collapse collapse " data-bs-parent="#chapters">
+                            <div class="accordion-body">
+                                <p>The IFC brings a variety of players to address critical world issues. Data over
+                                    the
+                                    last decade shows a growing inflation rate, with incomes not being correlated,
+                                    even though stocks and financial assets have been rising in value.
+                                </p>
+                                <p>Our goal is to make financial assets, which are typically immune to inflation,
+                                    accessible to the public, including those
+                                    who are not financially savvy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item end -->
+
+                    <!-- single item  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-2">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-2">
+                                How long does a trading section last?
+                            </button>
+                        </h2>
+                        <div id="chapter-2" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                            <div class="accordion-body">
+                                <p>A trading section lasts two weeks. After two weeks you should then see your
+                                    profits increase in proportion to the plan you’ve selected. After which you can
+                                    then make a withdrawal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item end -->
+                    <!-- single item  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-3">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-3">
+                                How many countries do we operate in?
+                            </button>
+                        </h2>
+                        <div id="chapter-3" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                            <div class="accordion-body">
+                                <p>Currently, we operate in over +50 countries on all continents
+                                    except Antarctica. We keep expanding each day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item end -->
+                    <!-- single item  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-4">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-4">
+                                How many returns will I get?.
+                            </button>
+                        </h2>
+                        <div id="chapter-4" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                            <div class="accordion-body">
+                                <p>How much profit you get is dependent on the plan you select.
+                                    Lease navigate to the Plans on the navigation bar above to
+                                    view our catalog.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item end -->
+
+                    <!-- single item  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-5">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-5">
+                                What are we affiliated with any international organization?
+                            </button>
+                        </h2>
+                        <div id="chapter-5" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                            <div class="accordion-body">
+                                <p>We are affiliated with the IFC (International Finance Cooperation), which is a
+                                    sub-organization of the World Bank. The
+                                    IFC’s goal is to reduce economic downturns and their effects. It does so by
+                                    bringing a variety of layers together to
+                                    contribute.</p>
+                                <p>We’re laying our part by making access to financial assets accessible and
+                                    profitable as well. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item end -->
+
+                    <!-- single item  -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-5">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                data-bs-target="#chapter-6">
+                                What do I need to get started?
+                            </button>
+                        </h2>
+                        <div id="chapter-6" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                            <div class="accordion-body">
+                                <p>You would need to create an account with us, please click on register on the
+                                    navigation bar above to get started. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item end -->
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--END-->
+{% endblock %}
